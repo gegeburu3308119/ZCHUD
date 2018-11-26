@@ -12,7 +12,7 @@
 @implementation ZCNotiHud
 +(void)showMessag:(NSString *)str{
     
-    CGSize size = [str boundingRectWithSize:CGSizeMake(300, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:labe.font} context:nil].size;
+    CGSize size = [str boundingRectWithSize:CGSizeMake(300, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:14} context:nil].size;
     UILabel * labe = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, size.width +20, size.height +20)];
     labe.backgroundColor = [UIColor blackColor];
     labe.textColor = [UIColor whiteColor];
