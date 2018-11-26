@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 
-s.name = "ZCHUD"
+s.name = "ZCDEILEIHUD"
 s.version = "2.0.0"
 s.summary = "一个弹框"
 s.description = "一个黑色的弹框"
