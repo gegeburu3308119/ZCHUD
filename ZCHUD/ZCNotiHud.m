@@ -7,7 +7,8 @@
 //
 
 #import "ZCNotiHud.h"
-
+#define ZCScreenH [UIScreen mainScreen].bounds.size.height
+#define ZCScreenW [UIScreen mainScreen].bounds.size.width
 @implementation ZCNotiHud
 +(void)showMessag:(NSString *)str{
     
@@ -46,9 +47,5 @@
 }
 
 
-+(void)showStatusProgress:(NSString*)hud{
-    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
-    [SVProgressHUD showWithStatus:[NSString stringWithFormat:@"%@...",hud]];
-    
-}
+
 @end

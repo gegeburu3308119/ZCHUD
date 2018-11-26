@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZCNotiHud : NSObject
 +(void)showMessag:(NSString*)str;
-+(void)showStatusProgress:(NSString*)hud;
+
 @end
 
 NS_ASSUME_NONNULL_END
