@@ -22,8 +22,8 @@
     labe.numberOfLines = 0;
     CGSize size = [labe.text boundingRectWithSize:CGSizeMake(300, labe.frame.size.height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:labe.font} context:nil].size;
     
-    labe.width = size.width +20;
-    labe.height = size.height +20;
+    labe.frame.size.width = size.width +20;
+    labe.frame.size.height = size.height +20;
     labe.layer.cornerRadius = 3;
     labe.layer.masksToBounds = YES;
     labe.center = CGPointMake(ZCScreenW/2, ZCScreenH/5*2);
