@@ -12,18 +12,16 @@
 @implementation ZCNotiHud
 +(void)showMessag:(NSString *)str{
     
-    
-    UILabel * labe = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
+    CGSize size = [labe.text boundingRectWithSize:CGSizeMake(300, labe.frame.size.height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:labe.font} context:nil].size;
+    UILabel * labe = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, size.width +20, size.height +20)];
     labe.backgroundColor = [UIColor blackColor];
     labe.textColor = [UIColor whiteColor];
     labe.text = [str isKindOfClass:[NSString class]]?str:@"未知错误";
     labe.font = [UIFont systemFontOfSize:14];
     labe.textAlignment = 1;
     labe.numberOfLines = 0;
-    CGSize size = [labe.text boundingRectWithSize:CGSizeMake(300, labe.frame.size.height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:labe.font} context:nil].size;
+   
     
-    labe.frame.size.width = size.width +20;
-    labe.frame.size.height = size.height +20;
     labe.layer.cornerRadius = 3;
     labe.layer.masksToBounds = YES;
     labe.center = CGPointMake(ZCScreenW/2, ZCScreenH/5*2);
